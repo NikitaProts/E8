@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>URL</th>
+              <th>Words count</th>
+              <th>HTTP Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for site in sites %}
+            <tr>
+              <th>{{ site._id }}</th>
+              <th>{{ site.address }}</th>
+              <th>{{ site.words_count }}</th>
+              <th>{{ site.http_status_code }}</th>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    
+</body>
+</html>
